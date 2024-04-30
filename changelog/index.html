@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Changelog - lti1p3 Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Changelog";
+        var mkdocs_page_input_path = "changelog.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> lti1p3 Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About LTI</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install/">Lti1p3 Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lms_config/">Link with an LMS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../develop/">Time to develop</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Changelog</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#version-602">Version 6.0.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-601">Version 6.0.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-600">Version 6.0.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-510">Version 5.1.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-501">Version 5.0.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-500">Version 5.0.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-410">Version 4.1.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-401">Version 4.0.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-400">Version 4.0.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-311">Version 3.1.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-310">Version 3.1.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-302">Version 3.0.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-301">Version 3.0.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-300">Version 3.0.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-200">Version 2.0.0</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">lti1p3 Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Changelog</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="changelog">Changelog</h1>
+<h3 id="version-602">Version 6.0.2</h3>
+<p><strong>1.- General</strong> </p>
+<ul>
+<li>remember token returns from the dead</li>
+</ul>
+<hr />
+<h3 id="version-601">Version 6.0.1</h3>
+<p><strong>1.- General</strong> </p>
+<ul>
+<li>Update dependencies and their impact to migrate to PHP-JWT &gt;6.0 and fix the security gap</li>
+<li>Update outdated model imports without the "Lti" prefix to load Models from the "App" namespace instead of the package.</li>
+<li>Change the signature of the methods in the LtiRolesManager trait to receive LtiContext instead of Context. Same for LtiUserRole.</li>
+<li>Remove unnecessary columns from the model and lti user migrations (password, remembertoken).</li>
+</ul>
+<hr />
+<h3 id="version-600">Version 6.0.0</h3>
+<p><strong>1.- General</strong> </p>
+<ul>
+<li>Unused use statements are removed</li>
+<li>The seeders that created an administrator user are removed, now the package does not use seeders.</li>
+</ul>
+<p><strong>2.- Migrations</strong> </p>
+<ul>
+<li>Add prefix in migrations for tables and attributes with lti1p3_ to avoid name collisions</li>
+<li>All migrations use anonymous classes</li>
+<li>The creation source columns are eliminated (LTI - MANUAL) now everything stored is purely LTI. Previously the package took over the users table and that column made the difference in the creation source, now lti users are stored in their own users table with the prefix lti1p3_.</li>
+</ul>
+<p><strong>3.- Models</strong> </p>
+<ul>
+<li>Models are prefixed with "Lti" to avoid name collisions</li>
+<li>The "isToolAdmin" method is eliminated in the user model since access to the dashboard is now with global credentials.</li>
+</ul>
+<p><strong>4.- Instances</strong> </p>
+<ul>
+<li>Soft delete is added</li>
+<li>Since find and findOrFail can be perfectly used to search for an instance with the identifier, "RecoveryFromId()" is eliminated and, failing that, the relationships loaded by said method (platform, context, resource_link, user) are loaded by default in the model declaration</li>
+</ul>
+<p><strong>5.- Non-lti authentication</strong></p>
+<p>In previous versions, the package took over the concept of users and managed both those created through LTI and those that could be created manually in any other context of the application. Subsequently, resources such as the Auth facade were used to implement a login that allowed access to the LMS registration panel. This approach was incorrect as it restricted the functionality of mixed users (LTI and non-LTI). Additionally, building a custom login required overriding some functionality that the package was hijacking by managing users in a standard way.</p>
+<p>Currently, we are looking to disassociate LTI users from the actions you want to perform in your application. For this reason, administration of the LTI panel will be carried out using a global user and password defined in its environment file and the lti users will be stored in a different table.</p>
+<p><strong>6.- Routes</strong></p>
+<ul>
+<li>Routes and their names are prefixed with lti1p3</li>
+<li>The redirection of the login route to LTI authentication is eliminated</li>
+<li>Dashboard access is now: {YOUR_DOMAIN}/lti1p3/login</li>
+</ul>
+<p><strong>6.- Middleware</strong></p>
+<ul>
+<li>The old "lti_instance_recovery" is renamed to "inject_lti_instance"</li>
+<li>A new middleware "lti1p3_session" is added to check if the user is logged in as the LTI administrator</li>
+</ul>
+<p><strong>7.- Validation of initial content in the LTI protocol</strong></p>
+<p>The user parameters: name, given_name, family_name and lis can be null, since the LTI can be configured to pass user data anonymously and that data is not sent, in previous versions of the package they are being required, which is why , when that configuration was given the LTI did not start throwing an exception.</p>
+<p><strong>8.- Vistas</strong>
+- Migration from Material design bootstrap to Bootstrap 5.3.x
+- Redesign of the administration panel for platforms
+- Ability to edit a platform without having to delete it to recreate it</p>
+<hr />
+<h3 id="version-510">Version 5.1.0</h3>
+<p><strong>1.- Now the user is authenticated with the middleware lti_instance_recovery</strong> </p>
+<p>Having the user data in the instance is important, but it wasn't enough to work with policies and gates. Now, the middleware will also take care of authenticating the user automatically.</p>
+<hr />
+<h3 id="version-501">Version 5.0.1</h3>
+<p><strong>1.- Fix input name when renderize the instance id with the blade directive</strong> </p>
+<p>The blade directive renders a hidden input for you which is then retrieved by the middleware using a specific identifier. After the previous update, we forgot to update the key name for this directive.</p>
+<hr />
+<h3 id="version-500">Version 5.0.0</h3>
+<p><strong>1.- Standardize the http code of responses when use lti_instance_recovery middleware</strong> </p>
+<p>In previous versions, passing an incorrect instance could generate 404 responses instead of 401 (unauthorized) among other security problems.
+Now if the token is not valid you will always get a 401 which is easier for the client to control.</p>
+<p><strong>2.- Standardize instance key for lti_instance_recovery middleware</strong> </p>
+<p>In older versions you could pass an instance identifier in the headers or as part of the request. These identifiers were similar but not the same, now for both cases the key is the same. </p>
+<pre><code>// key name before (HEADERS):
+lti1p3-instance-id
+
+// key name before (REQUEST)
+lti1p3_instance_id
+
+// key name now, for both cases (HEADERS - REQUEST)
+lti1p3-instance-id
+</code></pre>
+<hr />
+<h3 id="version-410">Version 4.1.0</h3>
+<p><strong>1.- Add leeway for check if token content is expired</strong> </p>
+<p>Sometimes a lag of seconds could lead to a token expiration just because a request took longer than usual, that doesn't mean the token is actually expired. A maneuver time has been included by default to check if the token is expired or not (240s).</p>
+<hr />
+<h3 id="version-401">Version 4.0.1</h3>
+<p><strong>1.- Fix publishing path for views and translations</strong> </p>
+<p>The published views and translations do not overwrite the package files, this was because the call and publish paths were different.</p>
+<hr />
+<h3 id="version-400">Version 4.0.0</h3>
+<p><strong>1.- Instances have expiration time</strong> </p>
+<p>You may want to use the instances that contain all the necessary context and user information as an authentication token, considering that only one UUID is valid for the client and you have all the information in your backend. In practice, it is not necessary to use the instances and a different authentication system, because the instance will only be created when the LTI launch is correct, in other words, the LMS is in charge of verifying that the user is real.</p>
+<p>Now, in the package configuration there is a new key that allows to define null or a number of seconds to determine the durability of the instance, after that, the application will return a 401 to all the routes that it protected with the <code>lti_instance_recovery</code> middleware.</p>
+<hr />
+<h3 id="version-311">Version 3.1.1</h3>
+<p><strong>1.- Prefixed resources</strong> </p>
+<p>You may want to have your own <code>style.css</code> file and forget about package styles. Now our <code>style.css</code> is called <code>lti1p3_style.css</code> to avoid potential collisions.
+Other unused css files were removed.</p>
+<hr />
+<h3 id="version-310">Version 3.1.0</h3>
+<p><strong>1.- New functions for get custom vars passed from LMS</strong> </p>
+<p>In the content class, in charge of accessing the initial JWT message in a more friendly way, you will now have methods that will allow you to access and check custom variables established in the LTI configuration within the LMS.</p>
+<pre><code>    public function getAllCustomVars() : ?object 
+    public function getCustomVar(string $name) : mixed
+    public function hasCustomVar(string $name) : bool
+    public function getCustomVarOrFail(string $name) : mixed
+</code></pre>
+<p>The method names are self-descriptive, just keep in mind that the failure for <code>getCustomVarOrFail</code> is an Exception.</p>
+<p><strong>2.- Remove optional functions</strong> </p>
+<p>These functions don't really make much sense, they returned <code>null</code> when a variable didn't exist and you had to check that later. We focus on what is important and leave the control of the optionality to you with the syntax of php 8.</p>
+<pre><code>    // Removed functions in content class.
+    public function optionalResourceLinkAttribute(string $attribute) : mixed
+    public function optionalPlatformAttribute(string $attribute) : mixed
+</code></pre>
+<p>Now you can do something like this:</p>
+<pre><code>// reference
+$content-&gt;getPlatform()-&gt;some_optional_var ?? whatever;
+// Example of actual usage
+$validation_context = $content-&gt;getPlatform()-&gt;validation_context ?? null;
+</code></pre>
+<hr />
+<h3 id="version-302">Version 3.0.2</h3>
+<p><strong>1.- Remove unused importation</strong> </p>
+<p>Removed an unused import in the launch controller. The import could be confusing and imported the Instance model directly from the package instead of the published model.</p>
+<hr />
+<h3 id="version-301">Version 3.0.1</h3>
+<p><strong>1.- Fix roles</strong> </p>
+<p>Since the current user is no longer authenticated and the way roles are stored was reformulated, the roles trait was corrupted. Now methods that query for roles require a context instance to query for roles in a particular context.</p>
+<p><strong>2.- Fix models importation</strong> </p>
+<p>Some model imports kept referencing the original models in the package and not the ones published within your application. If you wanted to add methods or new things in general they would never work because in reality the published model was not the one that was being called.
+Another issue identified was that passing an instance of a model could fail due to the model having a different namespace.</p>
+<hr />
+<h3 id="version-300">Version 3.0.0</h3>
+<p><strong>1.- Deep linking support.</strong> </p>
+<p>Support for deep link launches is added. This generates changes in the LTI launch methods (See point 2). A new class is implemented to generate responses of type <em>Deep Linking</em> and can be found at: <code>xcesaralejandro\lti1p3\Classes\DeepLinkingResponse</code>.</p>
+<p><strong>2.- Goodbye to the launch method onLaunch()</strong> </p>
+<p>Previously you only had to worry about starting your application in the <code>onLaunch()</code> method, there the initial message was already signed and the message type was ignored and treated as a resource hook due to lack of support. for <em>Deep Linking</em>. The method is now renamed based on the initial message type based on the standard. <code>onLaunch()</code> is now called <code>onResourceLinkRequest()</code> and <code>onDeepLinkingRequest()</code> is added. If your application doesn't use <em>Deep Linking</em>, handling the launch in <code>onResourceLinkRequest()</code> should suffice. </p>
+<p><strong>3.- Hello launch ids</strong> </p>
+<p>Since sessions were easily lost or overwritten when launching the same LTI in multiple browser tabs, maintaining LTI launch data was a problem. Now items related to the LTI release are stored in the database under an identifier that will allow the information to be retrieved later, the identifier must be passed constantly between URL changes.</p>
+<p><strong>4.- Aids for handling identifiers</strong></p>
+<p>Constantly passing the identifier between URLs and then retrieving the data is somewhat tedious, so a middleware called <code>lti_instance_recovery</code> appears that will verify the existence of a parameter called <code>lti1p3_instance_id</code> inside the <code>Request</code>, if it exists, will retrieve the instance and include it within the same <code>Request</code>. You can also use <code>Instance::RecoveryFromId($ID)</code> to retrieve data from an instance manually.</p>
+<p>Passing the instance identifier to the view shouldn't be a problem, but if we have a lot of forms creating <em>inputs hidden</em> can be inelegant. Failing that, use the <code>@addinstance($instance_id)</code> directive which will add an <em>input hidden</em> for you.</p>
+<hr />
+<h3 id="version-200">Version 2.0.0</h3>
+<p><strong>1.- Corrects the implementation of "deployments".</strong> </p>
+<p>Previously, the deployment was linked to the platform registry, this limited the lti to be installed only once within the LMS (what a mistake...).
+Now the deployment record was separated into its own table -as specified by the standard- and with this it is possible to install the LTI globally, in specific courses or as you wish.
+The admin panel has been updated to support this change.</p>
+<p><strong>2.- User roles are now stored locally</strong></p>
+<p>Role validations are still performed at runtime, but now the roles are being stored in a table for record keeping (These can become out of date if a role is updated in the LMS and the user does not log back into the LTI) . It is possible that roles from higher contexts are repeated, since they transcend to a lower level context and currently all the roles passed by the LMS are saved, associating them with their launch context.</p>
+<p>Roles were split into a new table and removed as a column from users.</p>
+<p><strong>3.- Goodbye deleted records</strong></p>
+<p>Soft deletes have been implemented for all models.</p>
+<p><strong>4.- Nod to LTI Advantage</strong></p>
+<p>Added a new field for platform registration: <code>lti_advantage_token_url</code> this allows defining an endpoint to obtain lti advantage tokens. Even though it's not implemented yet, it puts pressure on me and reminds me to keep developing. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../develop/" class="btn btn-neutral float-left" title="Time to develop"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../develop/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

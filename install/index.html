@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Lti1p3 Installation - lti1p3 Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lti1p3 Installation";
+        var mkdocs_page_input_path = "install.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> lti1p3 Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About LTI</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Lti1p3 Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#requeriments">Requeriments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing-lti1p3">Installing LTI1P3</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-add-package">Step 1- Add package</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-publish-the-provider">Step 2 - Publish the provider</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-run-migrations">Step 3 - Run migrations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#style-problems">Style problems</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#required-settings">Required settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-admin-panel-credentials">Create admin panel credentials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-the-package-configuration-file">Update the package configuration file</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lms_config/">Link with an LMS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../develop/">Time to develop</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">lti1p3 Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Lti1p3 Installation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="install">Install</h1>
+<h2 id="requeriments">Requeriments</h2>
+<p><strong>Php</strong> <br /> &gt;= 8.0</p>
+<p><strong>Laravel</strong> <br />&gt;= 8.0</p>
+<p><strong>Set up a domain name</strong><br /> You need configure a local domain to develop, since when using JWT, <code>localhost</code>, <code>127.0.0.1</code> or your current IP may not work correctly for signing. You can register a local domain name at: Linux: <code>/etc/hosts</code> and Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p><strong>HTTPS Cert</strong><br />
+You will need an https certificate to work with LTI, you can use a self-signed one. If you are using docker you can take a look at <a href="https://doc.traefik.io/traefik/">traefik</a>, otherwise you can look at <a href="https://certbot.eff.org/">certbot</a> which will help you obtain a certificate more easily. If not, go for <a href="https://letsencrypt.org/es/getting-started/">Let's encrypt</a></p>
+<h2 id="installing-lti1p3">Installing LTI1P3</h2>
+<h3 id="step-1-add-package">Step 1- Add package</h3>
+<p>Use composer to install the dependency with the following command:</p>
+<p><code>composer require xcesaralejandro/lti1p3</code></p>
+<h3 id="step-2-publish-the-provider">Step 2 - Publish the provider</h3>
+<p>The package provider will publish controllers, models, migrations, views, and everything you need to get started. You can extend or modify the functionalities later from the published files.</p>
+<p><code>php artisan vendor:publish --provider="xcesaralejandro\lti1p3\Providers\Lti1p3ServiceProvider" --force</code></p>
+<h3 id="step-3-run-migrations">Step 3 - Run migrations</h3>
+<p><code>php artisan migrate</code></p>
+<h3 id="style-problems">Style problems</h3>
+<p>If you are using some reversible proxy it is possible that the package styles published by the provider will try to load with http instead of https, which produces an error. To fix the problem you can force the https scheme in your <code>app/Providers/AppServiceProvider.php</code>, adding <code>\URL::forceScheme('https');</code> in the <code>boot</code> method.</p>
+<h2 id="required-settings">Required settings</h2>
+<h3 id="create-admin-panel-credentials">Create admin panel credentials</h3>
+<p>Add the following keys to the Laravel <code>.env</code> file. These will allow you to log in to the administration panel and thereby register the LMS.</p>
+<pre><code>LTI1P3_ADMIN_USERNAME=example@lti1p3.cl
+LTI1P3_ADMIN_PASSWORD=lti1p3_admin
+</code></pre>
+<h3 id="update-the-package-configuration-file">Update the package configuration file</h3>
+<p>After publishing our provider, we will have a file in <code>config/lti1p3.php</code>. There we must complete the configuration and we can manage the criteria to work with the roles.</p>
+<p>The <strong>required keys</strong> within the file <code>lti1p3.php</code> are listed below, the rest should be the default unless you understand that you are changing.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VERIFY_HTTPS_CERTIFICATE</strong></td>
+<td style="text-align: left;">If true, will not allow self-signed https certificates.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>KID</strong></td>
+<td style="text-align: left;">An identifier invented by you, this will be used to <br> identify the public key in the Json Web Tokens (JWT)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PRIVATE_KEY</strong></td>
+<td style="text-align: left;">A private RSA key. This key is used to generate the Json Web Key <br> and encrypt the communication with the LMS. <br> You can generate a new RSA private key of 2048 bit here:<br> https://travistidwell.com/jsencrypt/demo/</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="About LTI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lms_config/" class="btn btn-neutral float-right" title="Link with an LMS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lms_config/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
