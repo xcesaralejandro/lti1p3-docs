@@ -50,6 +50,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Link with an LMS</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#login-in-tool-panel">Login in tool panel</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#connection-points">Connection points</a>
     </li>
     </ul>
@@ -88,6 +90,9 @@
               
                 <h1 id="link-with-an-lms">Link with an LMS</h1>
 <p>To link an LMS with an LTI you must make registrations in the LMS and also in your tool. The LMS configuration will vary depending on it and you can review the following documentation: <a href="https://canvas.instructure.com/doc/api/file.lti_dev_key_config.html">CANVAS</a> and <a href="https://docs.moodle.org/404/en/Publish_as_LTI_tool">MOODLE</a>.</p>
+<h2 id="login-in-tool-panel">Login in tool panel</h2>
+<p>To register an LMS you must log in to the tool's administration panel. The access credentials are those that you have configured in your Laravel <code>.env</code> file. The keys are mentioned in the <strong>Required settings</strong> section.</p>
+<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/login</code></p>
 <h2 id="connection-points">Connection points</h2>
 <p>When configuring the tool in your LMS you will be asked for a URL as a connection point, for all URLs (except JWKS) you must use the following URL replacing your domain.</p>
 <p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/connect</code></p>
