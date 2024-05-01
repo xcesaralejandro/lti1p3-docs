@@ -2,6 +2,11 @@
 
 To link an LMS with an LTI you must make registrations in the LMS and also in your tool. The LMS configuration will vary depending on it and you can review the following documentation: [CANVAS](https://canvas.instructure.com/doc/api/file.lti_dev_key_config.html) and [MOODLE](https://docs.moodle.org/404/en/Publish_as_LTI_tool).
 
+## Login in tool panel
+To register an LMS you must log in to the tool's administration panel. The access credentials are those that you have configured in your Laravel `.env` file. The keys are mentioned in the **Required settings** section.
+
+`https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/login`
+
 ## Connection points
 When configuring the tool in your LMS you will be asked for a URL as a connection point, for all URLs (except JWKS) you must use the following URL replacing your domain.
 
