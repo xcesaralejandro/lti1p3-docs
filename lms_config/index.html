@@ -97,7 +97,7 @@
 <p>When configuring the tool in your LMS you will be asked for a URL as a connection point, for all URLs (except JWKS) you must use the following URL replacing your domain.</p>
 <p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/connect</code></p>
 <p>You will also be prompted for a connection point to the tool's public key, this may appear as JWKS. For this section you must use the following URL</p>
-<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/api/jwks</code></p>
+<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/api/lti1p3/jwks</code></p>
 <p><strong>IMPORTANT</strong> </p>
 <p>The connection point to obtain the JWKS must be public, that is, there must be access from your LMS to your connection point. If you are working locally with a domain that is not public to the Internet, the LMS will not be able to obtain the keys.</p>
 <p>Some LMSs will allow you to enter the manual key instead of a connection URL. You can enter to the URL of your JWKS and from there obtain the key in JSON format to manually add it to the LMS. If you add the key manually instead of using an endpoint, the LMS will have the key and can work locally without having to publicly expose a JWKS URL.</p>
