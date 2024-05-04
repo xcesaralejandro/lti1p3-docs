@@ -14,7 +14,7 @@ When configuring the tool in your LMS you will be asked for a URL as a connectio
 
 You will also be prompted for a connection point to the tool's public key, this may appear as JWKS. For this section you must use the following URL
 
-`https://[YOUR_APP_LARAVEL_DOMAIN]/api/jwks`
+`https://[YOUR_APP_LARAVEL_DOMAIN]/api/lti1p3/jwks`
 
 **IMPORTANT** 
 
