@@ -1,8 +1,9 @@
 site_name: lti1p3 Docs
 nav:
   - About LTI: index.md
-  - Lti1p3 Installation: install.md
+  - Installation: install.md
   - Link with an LMS: lms_config.md
   - Time to develop: develop.md
+  - FAQ: faq.md
   - Changelog: changelog.md
 theme: readthedocs
