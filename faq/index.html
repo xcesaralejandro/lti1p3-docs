@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Link with an LMS - lti1p3 Docs</title>
+    <title>FAQ - lti1p3 Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Link with an LMS";
-        var mkdocs_page_input_path = "lms_config.md";
+        var mkdocs_page_name = "FAQ";
+        var mkdocs_page_input_path = "faq.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,22 +47,20 @@
                 <li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Link with an LMS</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#login-in-tool-panel">Login in tool panel</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#connection-points">Connection points</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lms_config/">Link with an LMS</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../develop/">Time to develop</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">FAQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#csrf-not-working">CSRF NOT WORKING</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -83,7 +81,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Link with an LMS</li>
+      <li class="breadcrumb-item active">FAQ</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -92,26 +90,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="link-with-an-lms">Link with an LMS</h1>
-<p>To link an LMS with an LTI you must make registrations in the LMS and also in your tool. The LMS configuration will vary depending on it and you can review the following documentation: <a href="https://canvas.instructure.com/doc/api/file.lti_dev_key_config.html">CANVAS</a> and <a href="https://docs.moodle.org/404/en/Publish_as_LTI_tool">MOODLE</a>.</p>
-<h2 id="login-in-tool-panel">Login in tool panel</h2>
-<p>To register an LMS you must log in to the tool's administration panel. The access credentials are those that you have configured in your Laravel <code>.env</code> file. The keys are mentioned in the <strong>Required settings</strong> section.</p>
-<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/login</code></p>
-<h2 id="connection-points">Connection points</h2>
-<p>When configuring the tool in your LMS you will be asked for a URL as a connection point, for all URLs (except JWKS) you must use the following URL replacing your domain.</p>
-<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/lti1p3/connect</code></p>
-<p>You will also be prompted for a connection point to the tool's public key, this may appear as JWKS. For this section you must use the following URL</p>
-<p><code>https://[YOUR_APP_LARAVEL_DOMAIN]/api/lti1p3/jwks</code></p>
-<p><strong>IMPORTANT</strong> </p>
-<p>The connection point to obtain the JWKS must be public, that is, there must be access from your LMS to your connection point. If you are working locally with a domain that is not public to the Internet, the LMS will not be able to obtain the keys.</p>
-<p>Some LMSs will allow you to enter the manual key instead of a connection URL. You can enter to the URL of your JWKS and from there obtain the key in JSON format to manually add it to the LMS. If you add the key manually instead of using an endpoint, the LMS will have the key and can work locally without having to publicly expose a JWKS URL.</p>
-<p>Generating a public key requires that you add a private key to the package configuration file located in <code>config/lti1p3.php</code>.</p>
+                <h1 id="frequent-questions">Frequent questions</h1>
+<h2 id="csrf-not-working">CSRF NOT WORKING</h2>
+<p>Yes, it will not work because CSRF uses sessions to protect its forms and/or other sections. Without sessions, it is difficult for an attacker to achieve a CSRF attack.
+To date there is only one standard proposal to solve the problem of third-party cookies, which is why the package does not support creating sessions and instead are instances.
+To use the package you will need to disable csrf validation on all routes that directly affect the LTI.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../develop/" class="btn btn-neutral float-right" title="Time to develop">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../develop/" class="btn btn-neutral float-left" title="Time to develop"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../changelog/" class="btn btn-neutral float-right" title="Changelog">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -134,10 +123,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../develop/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../develop/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../changelog/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
